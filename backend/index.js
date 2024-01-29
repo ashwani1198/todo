@@ -23,7 +23,7 @@ app.post('/todo',async function(req, res){
     })
 
     res.json({
-        msg:"todo"
+        msg:"todo created successfully"
     })
 
 
@@ -47,7 +47,7 @@ app.put('/completed',async function(req, res){
         })
     }
 
-    await todo.update({
+    await todo.updateOne({
         _id : req.body.id
     },{
         completed : true
